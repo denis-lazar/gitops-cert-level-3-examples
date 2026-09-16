@@ -46,10 +46,10 @@ spec:
           targetRevision: HEAD
           helm:
             valueFiles:
-            - $values/helm-multi-source/my-values/common-values.yaml          
-            - $values/helm-multi-source/my-values/app-version/{{.version}}-values.yaml               
-            - $values/helm-multi-source/my-values/env-type/{{.type}}-values.yaml  
-            - $values/helm-multi-source/my-values/regions/{{.region}}-values.yaml                
+            - $values/helm-multi-source/my-values/common-values.yaml
+            - $values/helm-multi-source/my-values/app-version/{{.version}}-values.yaml
+            - $values/helm-multi-source/my-values/env-type/{{.type}}-values.yaml
+            - $values/helm-multi-source/my-values/regions/{{.region}}-values.yaml
             - $values/helm-multi-source/my-values/envs/{{.env}}-values.yaml
         - repoURL: 'https://github.com/codefresh-contrib/gitops-cert-level-3-examples.git'
           targetRevision: HEAD
