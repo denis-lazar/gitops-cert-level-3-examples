@@ -13,6 +13,14 @@ spec:
         region: us  
         type: non-prod   
         version: qa     
+      - env: integration-non-gpu
+        region: us  
+        type: non-prod   
+        version: qa     
+      - env: integration-gpu
+        region: us  
+        type: non-prod   
+        version: qa     
       - env: staging-asia
         region: asia
         type: non-prod  
@@ -47,6 +55,8 @@ spec:
           helm:
             valueFiles:
             - $values/helm-multi-source/my-values/common-values.yaml
+            - $values/helm-multi-source/my-values/envs/integration-gpu-values.yaml
+            - $values/helm-multi-source/my-values/envs/integration-non-gpu-values.yaml
             - $values/helm-multi-source/my-values/app-version/{{.version}}-values.yaml
             - $values/helm-multi-source/my-values/env-type/{{.type}}-values.yaml
             - $values/helm-multi-source/my-values/regions/{{.region}}-values.yaml
