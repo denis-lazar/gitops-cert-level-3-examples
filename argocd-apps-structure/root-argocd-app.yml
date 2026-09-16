@@ -6,8 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/codefresh-contrib/gitops-cert-level-3-examples.git
-    targetRevision: HEAD
+    repoURL: https://github.com/denis-lazar/gitops-cert-level-3-examples.git
     path: argocd-apps-structure/appsets
   destination:
     server: https://kubernetes.default.svc
